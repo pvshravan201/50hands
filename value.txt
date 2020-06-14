@@ -1,0 +1,24 @@
+  http: ^0.12.1
+import 'package:http/http.dart';
+
+
+  flutter_launcher_icons: ^0.7.5
+flutter pub run flutter_launcher_icons:main
+
+
+https://api.covid19api.com/total/dayone/country/canada
+
+  flutter_launcher_name: "^0.0.1"
+flutter pub run flutter_launcher_name:main
+
+#4C3CB0 
+
+#cc2b5e → #753a88
+
+#56ab2f → #a8e063
+#614385 → #516395
+#43cea2 → #185a9d
+
+sk.eyJ1Ijoic2hyYXZhbnB2MjAxIiwiYSI6ImNrYmJ1ejNocjAzdHIyc2w5NHd5bXJvdXoifQ.QA4T4IQh-UCwSJ2BUHw4mg-token
+
+shravanpv201.ckbbv3mfl237n22o9dlpuijsd-2d2db
