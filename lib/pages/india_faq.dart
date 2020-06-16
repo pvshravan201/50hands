@@ -2,19 +2,17 @@ import 'package:flutter/material.dart';
 class IndiaFAQ extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(4,16,4,0),
-                  child: ListView.builder(
-                    itemBuilder: (BuildContext context, int index) =>
-                        Padding(
-                          padding: const EdgeInsets.only(left:6.0,right:6),
-                          child: Card(color:Colors.blue[100],child: EntryItem(data[index])),
-                        ),
-                    itemCount: data.length,
-                  ),
-                ),
-              );
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(4,16,4,0),
+      child: ListView.builder(
+        itemBuilder: (BuildContext context, int index) =>
+            Padding(
+              padding: const EdgeInsets.only(left:6.0,right:6),
+              child: Card(color:Colors.blue[100],child: EntryItem(data[index])),
+            ),
+        itemCount: data.length,
+      ),
+    );
   }
 }
 class Entry {
@@ -27,69 +25,69 @@ class Entry {
 // The entire multilevel list displayed by this app.
 final List<Entry> data = <Entry>[
   Entry(
-    'How is a US citizen treated when returning from China?',
+    'What are the Travel and Visa restrictions for due to COVID ?',
     <Entry>[
-      Entry('"American citizens, legal permanent residents, and their immediate families who are arriving from impacted area must travel through one of 13 airports where DHS has established enhanced entry screening capabilities.\nAll American citizens, legal permanent residents, and their immediate families who are returning from the impacted area must self-quarantine for 14 days after their arrival. Screening & Quarantine: \nUpon arrival, travelers will proceed to standard customs processing. They will then continue to an enhanced entry screening where the passenger will be asked about their medical history, current condition, and asked for contact information for local health authorities.  Additionally, some passengers will have their temperature taken. After the enhanced entry screening is complete, passengers will be given written guidance about COVID-19 and be allowed to proceed to their final destination. Once home, individuals must immediately self-quarantine in their home and monitor their health in accordance with CDC best practices. In order to ensure compliance, local and State public health officials will contact individuals in the days and weeks following their arrival."'),
+      Entry('"All regular (sticker) Visas/e-Visa (including VoA for Japan and South Korea) granted to nationals of Italy, Iran, South Korea, Japan and issued on or before 03.03.2020 and who have not yet entered India, stand suspended with immediate effect. Such foreign nationals may not enter India from any Air, Land or Seaport ICPs. Those requiring to travel to India due to compelling reasons, may seek fresh visa from nearest Indian Embassy/Consulate. Regular (sticker) visa / e-Visa granted to nationals of Peoples Republic of China, issued on or before 05.02.2020 were suspended earlier. It shall remain in force. Such Chinese nationals may not enter India from any Air, Land or Seaport ICPs. Those needing to travel to India under compelling circumstances may apply for fresh visa to nearest Indian Embassy/Consulate. Regular (sticker) visas/e-Visas granted to all foreign nationals who have travelled to Peoples Republic of China, Iran, Italy, South Korea and Japan on or after 01.02.2020, and who have not yet entered India stand suspended with immediate effect.  Such foreign nationals may not enter India from any Air, Land or Seaport ICPs. Those requiring to travel to India under compelling circumstances may apply for fresh visa to nearest Indian Embassy/Consulate. Diplomats, officials of UN and other International bodies, OCI cardholders and Aircrew from above countries are exempted from such restriction on entry. However, their medical screening is compulsory. All foreign and Indian nationals entering into India from any port are required to furnish duly filled self declaration form (including personal particulars i.e. phone no. and address in India) and travel history, to Health officials and Immigration officials at all port. Passengers (foreign and Indian) other than those restricted, arriving directly or indirectly from China, South Korea, Japan, Iran, Italy, Hong Kong, Macau, Vietnam, Malaysia, Indonesia, Nepal, Thailand, Singapore and Taiwan must undergo medical screening at port of entry."'),
     ],
   ),
   Entry(
-    'Reporting COVID-19 in the United States',
+    'Are Dabbas and Truck repair shops opened during COVID ?',
     <Entry>[
-      Entry('US Healthcare providers who are concerned that a patient may have Corona Virus should contact their nearest'),
+      Entry('Yes. And the locations of dabbas and truck repai shops of each state during COVID  read more'),
+        ],
+  ),
+  Entry(
+    'What is the standard operating procedure for transporting a suspect or a confirmed case of COVID ?',
+    <Entry>[
+      Entry('Corona Virus is a highly transmissible disease and hence precautions need to be taken while transporting a suspected or confirmed case. A set number of ambulances must be set aside specifically got transporting COVID-19 patients. Currently, there are two types of ambulances, ALS and BLS, with and without ventilators respectively. Ambulance staff (technicians as well as drivers) should be trained and oriented about common signs and symptoms of COVID-19. Both the EMT and driver of the ambulance must wear PPE while handling, managing and transporting the COVID identified/ suspect patients. The patient and attendant should be provided with a triple-layer mask and gloves. All surfaces that may have come in contact with the patient or materials contaminated during patient care should be thoroughly cleaned and disinfected using 1% Sodium Hypochlorite solution. The reusable patient care equipment must be disinfected with an alcohol-based rub. All surfaces and equipment should be cleaned in the morning, evening and after every use with soap/detergent and water.'),
     ],
   ),
   Entry(
-    'What should I do if I travelled in a flight with confirmed cases within Canada?',
+    'why is Family health Insurance neccessary ?.',
     <Entry>[
-      Entry('You an check your flight on the Canada flight tracker website to see whether anyone from a flight you travelle on has the coronavirus. If there was someone who tested positive, you should immediately test yourself too and go into isolation to stop further spreading. '),
+      Entry('A single health Insurance for you and your family !. It offers financial assistance against hospitalizationamd any health emergency for both you and your family.'),
     ],
   ),
   Entry(
-    'What are the disinfectants recommended for environmental cleaning in healthcare facilities or homes housing patients suspected or comfirmed with Covid19?',
+    'What are the guidance for international arrival ?',
     <Entry>[
-      Entry('"Environmental cleaning in healthcare facilities or homes housing patients with suspected or confirmed 2019-nCoV infection should use disinfectants that are active against enveloped viruses, such as 2019-nCoV and other coronaviruses. There are many disinfectants, including commonly used hospital disinfectants, that are active against enveloped viruses. Currently WHO recommendations include the use of:\n70% Ethyl alcohol to disinfect reusable dedicated equipment (e.g., thermometers) between uses Sodium hypochlorite at 0.5% (equivalent 5000ppm) for disinfection of frequently touched surfaces in homes or healthcare facilities."'),
+      Entry('Before boarding, all travellers shall give an undertaking that they would undergo mandatory quarantine for 14 days - 7 days paid institutional quarantine at their own cost, followed by 7 days isolation at home with self-monitoring of health.'),
     ],
   ),
   Entry(
-    'What services are covered by canadian government health insurance? ',
+    'When will colleges reopen?',
     <Entry>[
-      Entry('If you think you have COVID-19 infection, ask yourself if you can manage the symptoms at home. Fever can be managed with paracetamol. Important: If you feel uncomfortable managing the symptoms at home, particularly if you feel shortness of breath, please seek medical help.\n\nThere are news reports, especially on social media, suggesting that medications such as ibuprofen (so-called non-steroidal anti-inflammatory medicines or NSAIDs) used to lower fever and treat pain could worsen COVID-19. Based on currently available information, the World Health Organization (WHO) and the European Medicines Agency (EMA) do not recommend against the use of ibuprofen as there is, at the moment, no scientific evidence establishing a link between ibuprofen and worsening of COVID 19.4 If in doubt, please ask your physician which medication is safe for you to take to treat fever and/or pain.\n'),
+      Entry('College sessions will begin in August for current students and September for new ones, said by the University Grants Commission. The admission process in universities will also begin from August. Schools and colleges have been closed across the country since last month amid the coronavirus pandemic. Source: Indian Govt.'),
     ],
   ),
   Entry(
-    'Are there visitor restrictions related to coronavirus at hospitals?',
+    'How do I cope with living alone in self-isolation?',
     <Entry>[
-      Entry('"In an attempt to prevent the spread of COVID-19, influenza and other infectious diseases in order to protect patients and employees, Community Health Network has limited visitor restrictions at its hospital sites.\nNo visitors will be permitted at Community Hospital North, Community Hospital East, Community Hospital South, Community Heart and Vascular Hospital, Community Behavioral Health, Community Howard Regional Health and Community Hospital Anderson.\nPlease see visitation exceptions below for OB/Maternity/NICU and end-of-life scenarios.For the safety of patients and caregivers, no packages, gifts, food, etc., will be allowed into our facilities."'),
+      Entry('Controlling emotions and normalising them by saying to yourself that 80 per cent of COVID-19 infections are mild can reduce sadness, anger, or frustration.Monitoring yourself or being monitored by others for signs and symptoms of COVID-19 is very stressful. During this time, keep yourself occupied with Yoga, indoor games, movies or anything that can divert your mind. Try relaxation techniques like breathing exercises that will help you de-stress and cope with loneliness. Loneliness can lead to health problems, including an impaired immune system. So, sleeping a bit more and hydrating yourself particularly when you feel tired can help you deal with stress, reduce your anxiety and speed up recovery as well.'),
     ],
   ),
   Entry(
-    'What are the recommendations for the functioning of restaurants and bars during Covid19?',
+    'How Microsoft Plasmabot In india helps to the government?',
     <Entry>[
-      Entry('If you think you have COVID-19 infection, ask yourself if you can manage the symptoms at home. Fever can be managed with paracetamol. Important: If you feel uncomfortable managing the symptoms at home, particularly if you feel shortness of breath, please seek medical help.\n\nThere are news reports, especially on social media, suggesting that medications such as ibuprofen (so-called non-steroidal anti-inflammatory medicines or NSAIDs) used to lower fever and treat pain could worsen COVID-19. Based on currently available information, the World Health Organization (WHO) and the European Medicines Agency (EMA) do not recommend against the use of ibuprofen as there is, at the moment, no scientific evidence establishing a link between ibuprofen and worsening of COVID 19.4 If in doubt, please ask your physician which medication is safe for you to take to treat fever and/or pain.\n'),
+      Entry('As countries including India explore plasma therapy to treat severe COVID-19 patients, Microsoft is launching a plasmabot initiative to encourage people who have been recovered from the deadly disease donate their plasma. Several studies have begun in different parts of the world to test effectiveness of convalescent plasma therapy in treating COVID-19 patients. The idea behind this therapy is that immunity can be transferred from a healthy person to a sick using convalescent plasma. In India, states like Kerala and Gujarat have started Convalescent Plasma Therapy from to treat Covid-19 patients read more.'),
     ],
   ),
   Entry(
-    'What are the safety practices to be taken up for critical infrastructure workers who might have been exposed to people with confirmed Covid19? ',
+    'How India’s Covid-19 lockdown has worsened the shortages at blood banks?',
     <Entry>[
-      Entry('"To ensure the continuity of operations, CDC advises that critical infrastructure workers may be permitted to continue work following potential exposure to COVID-19, provided they remain symptom-free and additional precautions are taken to protect them and the community.\nEmployers should:\nCheck temperatures and assess symptoms of workers, ideally before entering the facility or operation.\nIf no fever (>100.4oF) or COVID-19 symptoms are present, workers should self-monitor for onset of symptoms during their shift."\n'),
+      Entry('Due to the covid 19 pandemic, The blood banks are closed and it takes nearly 14-16 days to transfer a blood to the patients. hospitals are making do with fewer staff, and fewer donors are coming forward due to restrictions on people’s movement and the fear of contracting Covid-19 at a hospital or clinic, our reporting found. People do not want to go to blood banks, and especially blood banks within hospitals, because of the fear of getting infected with Covid-19. The lockdown has restricted movement, so regular donors living far from a hospital or blood bank cannot donate, and finding new donors in nearby areas is a challenge. Even when people come, doctors have to be careful about who is donating blood. Donors will have to be asked questions about travel history or contact with anyone who has travelled abroad.'),
     ],
   ),
   Entry(
-    'How is Canada responding to COVID-19?',
+    'Whether they will be quarantined upon arrival in India (quarantined for 14 days) ?',
     <Entry>[
-      Entry('How is Canada responding to COVID-19?	The Government of Canada has created the infrastructure to respond to the public health threats of the virus, and is well prepared to act—in collaboration with provincial and territorial governments and international partners—to minimize the health, economic, and social impacts of this rapidly evolving public health issue.   Read More...'),
+      Entry('1. All passengers coming from/transiting through UAE, Qatar, Oman and Kuwait after 12.00 GMT on March 18, 2020 (Port of Departure) will be quarantined.\n2. Those who have visited China, Republic of Korea, Iran, Italy, Spain, France and Germany on or after Feb 15, 2020 will be quarantined.'),
     ],
   ),
   Entry(
-    'Types of Prenatal Care',
+    'Who are not allowed?',
     <Entry>[
-      Entry('There are different providers of prenatal care, there are also different models of prenatal care, from individual provider, to interprofessional teams, to group prenatal care.Read more'),
-    ],
-  ),
-  Entry(
-    'Advice for mothers during COVID-19 for pregnancy . ',
-    <Entry>[
-      Entry('COVID-19 is a new disease and we are still learning how it affects pregnant women. Currently, there is no evidence that suggests pregnant women are at a higher risk of getting COVID-19 or if acquired, having more serious illness. There is also not enough evidence at this time to confirm that a mother can pass COVID-19 to her child during pregnancy.Read more.Read more'),
+      Entry('No airline will bring any passenger from Austria, Belgium, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Iceland, Hungary, Ireland, Italy, Latvia, Liechtenstein, Lithuania, Luxembourg, Malta, Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden, Switzerland, Turkey, United Kingdom effective 12.00 GMT on March 18,2020 at Port of Departure. No airline will bring any passenger from Philippines, Malaysia and Afghanistan effective 15.00 IST on March 17, 2020 (Port of Departure).'),
     ],
   ),
 ];

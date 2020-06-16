@@ -6,6 +6,8 @@ import 'package:coronaApp/pages/payment.dart';
 import 'package:flutter/material.dart';
 import 'package:ff_navigation_bar/ff_navigation_bar.dart';
 
+import 'corona_info.dart';
+
 
 
 class Home extends StatefulWidget {
@@ -20,7 +22,7 @@ class _HomeState extends State<Home> {
     HomeScreen(),
     Payment(),
     Coronatab(),
-    Text('Corona and me'),
+    MyStoryApp(),
     Help(),
    ];
 

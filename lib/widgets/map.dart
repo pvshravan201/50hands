@@ -16,12 +16,14 @@ class _MapState extends State<Map> {
 
    void _getCurrentLocation()  async {
     final  position = await Geolocator().getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+    if (this.mounted){
     setState(() {
       // _location="${position.latitude},${position.longitude}";
       clat=position.latitude;
       clong=position.longitude;
 
     });
+    }
     
   }
   

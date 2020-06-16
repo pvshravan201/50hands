@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:coronaApp/pages/canada_faq.dart';
 import 'package:coronaApp/pages/chat_bot.dart';
@@ -8,9 +7,6 @@ import 'package:coronaApp/pages/usa_faq.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:coronaApp/pages/general.dart';
 
-
-
-
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -19,10 +15,9 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int selectedIndex = 0;
   final List<String> categories = ['General', 'Canada', 'India', 'USA'];
-  Widget wow=GeneralData();
+  Widget wow = GeneralData();
   Future<void> _launched;
-  String toLaunch = 'https://www.50hands.org';
-
+  String toLaunch = 'http://developer.50hands.org/';
 
   Future<void> _launchInBrowser(String url) async {
     if (await canLaunch(url)) {
@@ -40,10 +35,9 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-          child: Scaffold(
+      child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          
           centerTitle: true,
           backgroundColor: Colors.blue,
           title: Padding(
@@ -54,19 +48,31 @@ class _HomeScreenState extends State<HomeScreen> {
                 fontSize: 22.0,
                 fontWeight: FontWeight.bold,
                 letterSpacing: 2,
-                 
               ),
             ),
           ),
           elevation: 0.0,
-          leading: IconButton(icon: Icon(Icons.chat), onPressed:(){Navigator.of(context).push(MaterialPageRoute(
-                          builder: (BuildContext context) =>
-                              ChatBot()));}          
-          ),
-          actions:<Widget>[
-            IconButton(icon:Icon(Icons.laptop_windows,color: Colors.white,), onPressed:(){setState(() {
-            _launched = _launchInBrowser(toLaunch);
-          });},)
+          leading: GestureDetector(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(8.0, 12, 4, 8),
+                child: Image(image: AssetImage('assets/images/chatbot.png')),
+              ),
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => ChatBot()));
+              }),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(
+                Icons.laptop_windows,
+                color: Colors.white,
+              ),
+              onPressed: () {
+                setState(() {
+                  _launched = _launchInBrowser(toLaunch);
+                });
+              },
+            )
           ],
         ),
         body: Column(
@@ -75,11 +81,9 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 55.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(20),
-                  bottomRight: Radius.circular(20)
-                ),
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20)),
                 color: Colors.blue,
-
               ),
               child: Container(
                 width: MediaQuery.of(context).size.width,
@@ -91,14 +95,14 @@ class _HomeScreenState extends State<HomeScreen> {
                       onTap: () {
                         setState(() {
                           selectedIndex = index;
-                          if(index==0){
-                            wow=GeneralData();
-                          } else if(index==1){
-                            wow=CanadaFAQ();
-                          } else if(index==2){
-                            wow=IndiaFAQ();
-                          } else{
-                            wow=USAFAQ();
+                          if (index == 0) {
+                            wow = GeneralData();
+                          } else if (index == 1) {
+                            wow = CanadaFAQ();
+                          } else if (index == 2) {
+                            wow = IndiaFAQ();
+                          } else {
+                            wow = USAFAQ();
                           }
                         });
                       },
@@ -124,7 +128,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             Flexible(
-                          child: Container(
+              child: Container(
                 decoration: BoxDecoration(
                   // color: Color(0xFFFEF9EB),
                   borderRadius: BorderRadius.only(

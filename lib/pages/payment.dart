@@ -53,6 +53,24 @@ class _PaymentState extends State<Payment> {
   Widget build(BuildContext context) {
     return SafeArea(
           child: Scaffold(
+            appBar: AppBar(
+          
+          centerTitle: true,
+          backgroundColor: Colors.blue,
+          title: Padding(
+            padding: const EdgeInsets.only(top: 8.0),
+            child: Text(
+              "Support",
+              style: TextStyle(
+                fontSize: 22.0,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 2,
+                 
+              ),
+            ),
+          ),
+          elevation: 0.0,
+        ),
             // backgroundColor: Colors.yellow,
             body: SingleChildScrollView (
                             child: Column(
@@ -65,7 +83,6 @@ class _PaymentState extends State<Payment> {
                      mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    CircleAvatar(child: Image.asset("assets/icons/Logo.png"),radius: 40,backgroundColor: Colors.transparent),
                     Container(
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(

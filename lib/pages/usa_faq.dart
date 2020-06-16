@@ -2,19 +2,17 @@ import 'package:flutter/material.dart';
 class USAFAQ extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(4,16,4,0),
-                  child: ListView.builder(
-                    itemBuilder: (BuildContext context, int index) =>
-                        Padding(
-                          padding: const EdgeInsets.only(left:6.0,right:6),
-                          child: Card(color:Colors.blue[100],child: EntryItem(data[index])),
-                        ),
-                    itemCount: data.length,
-                  ),
-                ),
-              );
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(4,16,4,0),
+      child: ListView.builder(
+        itemBuilder: (BuildContext context, int index) =>
+            Padding(
+              padding: const EdgeInsets.only(left:6.0,right:6),
+              child: Card(color:Colors.blue[100],child: EntryItem(data[index])),
+            ),
+        itemCount: data.length,
+      ),
+    );
   }
 }
 class Entry {
@@ -39,57 +37,57 @@ final List<Entry> data = <Entry>[
     ],
   ),
   Entry(
-    'What should I do if I travelled in a flight with confirmed cases within Canada?',
+    'How Department of Transportation handles to contain COVID spread?',
     <Entry>[
-      Entry('You an check your flight on the Canada flight tracker website to see whether anyone from a flight you travelle on has the coronavirus. If there was someone who tested positive, you should immediately test yourself too and go into isolation to stop further spreading. '),
+      Entry('As a member of the White House Coronavirus Task Force, DOT helps support the Administration’s efforts to contain and mitigate the spread of the virus, and ensure continuation of critical infrastructure support and relief for the American people. Response measures implemented by the Department to date have included stakeholder outreach and guidance, expanded federal assistance, and regulatory relief. '),
     ],
   ),
   Entry(
-    'What are the disinfectants recommended for environmental cleaning in healthcare facilities or homes housing patients suspected or comfirmed with Covid19?',
+    'How to plan travel post-corona virus',
     <Entry>[
-      Entry('"Environmental cleaning in healthcare facilities or homes housing patients with suspected or confirmed 2019-nCoV infection should use disinfectants that are active against enveloped viruses, such as 2019-nCoV and other coronaviruses. There are many disinfectants, including commonly used hospital disinfectants, that are active against enveloped viruses. Currently WHO recommendations include the use of:\n70% Ethyl alcohol to disinfect reusable dedicated equipment (e.g., thermometers) between uses Sodium hypochlorite at 0.5% (equivalent 5000ppm) for disinfection of frequently touched surfaces in homes or healthcare facilities."'),
+      Entry('When planning for travel trips after Covid-19, one should be cautious, and clean and hygenic places to stay instead of any random place. One should also wait until it is completely safe to travel. They should wait for three things to happen: the State Department has to lift its level 4 travel advisory, the centers for disease control and prevention should give the "all clear," and the World Health Organization (WHO) should also approve.'),
     ],
   ),
   Entry(
-    'What services are covered by canadian government health insurance? ',
+    'What happens if i need treatment and it\'s not covered by my province? ',
     <Entry>[
-      Entry('If you think you have COVID-19 infection, ask yourself if you can manage the symptoms at home. Fever can be managed with paracetamol. Important: If you feel uncomfortable managing the symptoms at home, particularly if you feel shortness of breath, please seek medical help.\n\nThere are news reports, especially on social media, suggesting that medications such as ibuprofen (so-called non-steroidal anti-inflammatory medicines or NSAIDs) used to lower fever and treat pain could worsen COVID-19. Based on currently available information, the World Health Organization (WHO) and the European Medicines Agency (EMA) do not recommend against the use of ibuprofen as there is, at the moment, no scientific evidence establishing a link between ibuprofen and worsening of COVID 19.4 If in doubt, please ask your physician which medication is safe for you to take to treat fever and/or pain.\n'),
+      Entry('Sometimes, a patient needs medical treatment or care that cannot be provided in Manitoba. Manitoba Health, Seniors and Active Living may cover some of the costs of this care, based on a specific approval process. '),
     ],
   ),
   Entry(
-    'Are there visitor restrictions related to coronavirus at hospitals?',
+    'USA Health Care System',
     <Entry>[
-      Entry('"In an attempt to prevent the spread of COVID-19, influenza and other infectious diseases in order to protect patients and employees, Community Health Network has limited visitor restrictions at its hospital sites.\nNo visitors will be permitted at Community Hospital North, Community Hospital East, Community Hospital South, Community Heart and Vascular Hospital, Community Behavioral Health, Community Howard Regional Health and Community Hospital Anderson.\nPlease see visitation exceptions below for OB/Maternity/NICU and end-of-life scenarios.For the safety of patients and caregivers, no packages, gifts, food, etc., will be allowed into our facilities."'),
+      Entry('The U.S. health system is a mix of public and private, for-profit and nonprofit insurers and health care providers. The federal government provides funding for the national Medicare program for adults age 65 and older and some people with disabilities as well as for various programs for veterans and low-income people, including Medicaid and the Children’s Health Insurance Program.'),
     ],
   ),
   Entry(
-    'What are the recommendations for the functioning of restaurants and bars during Covid19?',
+    'How can I get emergency finanacial aid?',
     <Entry>[
-      Entry('If you think you have COVID-19 infection, ask yourself if you can manage the symptoms at home. Fever can be managed with paracetamol. Important: If you feel uncomfortable managing the symptoms at home, particularly if you feel shortness of breath, please seek medical help.\n\nThere are news reports, especially on social media, suggesting that medications such as ibuprofen (so-called non-steroidal anti-inflammatory medicines or NSAIDs) used to lower fever and treat pain could worsen COVID-19. Based on currently available information, the World Health Organization (WHO) and the European Medicines Agency (EMA) do not recommend against the use of ibuprofen as there is, at the moment, no scientific evidence establishing a link between ibuprofen and worsening of COVID 19.4 If in doubt, please ask your physician which medication is safe for you to take to treat fever and/or pain.\n'),
+      Entry('As colleges begin receiving the federal funds and finalizing plans to distribute the money, students may need to jump through a few hoops to get coverage of their expenses resulting from this disruption. Know that the way federal financial aid works is that students must first apply for the aid by answering a series of questions used to determine their ability to pay for college. '),
     ],
   ),
   Entry(
-    'What are the safety practices to be taken up for critical infrastructure workers who might have been exposed to people with confirmed Covid19? ',
+    'How to hit pause button on mortgage payments during the pandemic?',
     <Entry>[
-      Entry('"To ensure the continuity of operations, CDC advises that critical infrastructure workers may be permitted to continue work following potential exposure to COVID-19, provided they remain symptom-free and additional precautions are taken to protect them and the community.\nEmployers should:\nCheck temperatures and assess symptoms of workers, ideally before entering the facility or operation.\nIf no fever (>100.4oF) or COVID-19 symptoms are present, workers should self-monitor for onset of symptoms during their shift."\n'),
+      Entry(' Disheartening levels of jobless claims will likely drive more homeowners to seek mortgage relief in the weeks ahead.'),
     ],
   ),
   Entry(
-    'How is Canada responding to COVID-19?',
+    'Are there going to be drug shortages due to medical facility closures across the world?',
     <Entry>[
-      Entry('How is Canada responding to COVID-19?	The Government of Canada has created the infrastructure to respond to the public health threats of the virus, and is well prepared to act—in collaboration with provincial and territorial governments and international partners—to minimize the health, economic, and social impacts of this rapidly evolving public health issue.   Read More...'),
+      Entry('The FDA has been closely monitoring the supply chain with the expectation that the COVID-19 outbreak would likely impact the medical product supply chain, including potential disruptions to supply or shortages of critical medical products in the U.S.\nWe have been reaching out to manufacturers as part of our approach to identifying potential disruptions or shortages. We will use all available tools to react swiftly and mitigate the impact to U.S. patients and health care professionals when a potential disruption or shortage is identified.'),
     ],
   ),
   Entry(
-    'Types of Prenatal Care',
+    'Can I work in U.S while waiting for my green card?',
     <Entry>[
-      Entry('There are different providers of prenatal care, there are also different models of prenatal care, from individual provider, to interprofessional teams, to group prenatal care.Read more'),
+      Entry('A common way to work temporarily in the United States as a nonimmigrant is for a prospective employer to file a petition with USCIS on your behalf.If you have the right combination of skills, education, and/or work experience, you may be able to live and work permanently in the United States by seeking an employment-based immigrant visa.'),
     ],
   ),
   Entry(
-    'Advice for mothers during COVID-19 for pregnancy . ',
+    'CRA Consideration for Activities in Response to the COVID-19',
     <Entry>[
-      Entry('COVID-19 is a new disease and we are still learning how it affects pregnant women. Currently, there is no evidence that suggests pregnant women are at a higher risk of getting COVID-19 or if acquired, having more serious illness. There is also not enough evidence at this time to confirm that a mother can pass COVID-19 to her child during pregnancy.Read more.Read more'),
+      Entry('The Federal Reserve Board, the FDIC, and the Office of the Comptroller of the Currency (the agencies) recognize the potential for the Coronavirus Disease (referred to as COVID-19) to adversely affect the customers and operations of financial institutions.'),
     ],
   ),
 ];

@@ -2,19 +2,17 @@ import 'package:flutter/material.dart';
 class CanadaFAQ extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(4,16,4,0),
-                  child: ListView.builder(
-                    itemBuilder: (BuildContext context, int index) =>
-                        Padding(
-                          padding: const EdgeInsets.only(left:6.0,right:6),
-                          child: Card(color:Colors.blue[100],child: EntryItem(data[index])),
-                        ),
-                    itemCount: data.length,
-                  ),
-                ),
-              );
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(4,16,4,0),
+      child: ListView.builder(
+        itemBuilder: (BuildContext context, int index) =>
+            Padding(
+              padding: const EdgeInsets.only(left:6.0,right:6),
+              child: Card(color:Colors.blue[100],child: EntryItem(data[index])),
+            ),
+        itemCount: data.length,
+      ),
+    );
   }
 }
 class Entry {
