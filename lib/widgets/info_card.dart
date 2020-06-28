@@ -26,7 +26,14 @@ class InfoCard extends StatelessWidget {
             width: MediaQuery.of(context).size.width/3.3,
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.circular(20),
+              boxShadow: [
+                        BoxShadow(
+                          color: Colors.black26,
+                          offset: Offset(0.0, 2.0),
+                          blurRadius: 6.0,
+                        ),
+                      ],
+              borderRadius: BorderRadius.circular(10),
             ),
             child: Column(
               children: <Widget>[

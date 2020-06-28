@@ -17,7 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final List<String> categories = ['General', 'Canada', 'India', 'USA'];
   Widget wow = GeneralData();
   Future<void> _launched;
-  String toLaunch = 'http://developer.50hands.org/';
+  String toLaunch = 'https://50hands.org/';
 
   Future<void> _launchInBrowser(String url) async {
     if (await canLaunch(url)) {
@@ -36,10 +36,10 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.blueAccent,
         appBar: AppBar(
           centerTitle: true,
-          backgroundColor: Colors.blue,
+          backgroundColor: Colors.blueAccent,
           title: Padding(
             padding: const EdgeInsets.only(top: 8.0),
             child: Text(
@@ -54,8 +54,8 @@ class _HomeScreenState extends State<HomeScreen> {
           elevation: 0.0,
           leading: GestureDetector(
               child: Padding(
-                padding: const EdgeInsets.fromLTRB(8.0, 12, 4, 8),
-                child: Image(image: AssetImage('assets/images/chatbot.png')),
+                padding: const EdgeInsets.fromLTRB(8.0, 4, 0, 0),
+                child: Image(image: AssetImage('assets/images/nila_chatbot.png')),
               ),
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
@@ -80,10 +80,10 @@ class _HomeScreenState extends State<HomeScreen> {
             Container(
               height: 55.0,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(20),
-                    bottomRight: Radius.circular(20)),
-                color: Colors.blue,
+                // borderRadius: BorderRadius.only(
+                //     bottomLeft: Radius.circular(20),
+                //     bottomRight: Radius.circular(20)),
+                //color: Colors.blue,
               ),
               child: Container(
                 width: MediaQuery.of(context).size.width,
@@ -116,8 +116,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           style: TextStyle(
                             color: index == selectedIndex
                                 ? Colors.white
-                                : Colors.black,
-                            fontSize: 18.0,
+                                : Colors.white54,
+                            fontSize: 20.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -130,7 +130,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Flexible(
               child: Container(
                 decoration: BoxDecoration(
-                  // color: Color(0xFFFEF9EB),
+                  color: Colors.white,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(20.0),
                     topRight: Radius.circular(20.0),

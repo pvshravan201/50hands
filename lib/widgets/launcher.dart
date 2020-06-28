@@ -3,12 +3,9 @@ import 'package:flutter/material.dart';
 
 import 'package:webview_flutter/webview_flutter.dart';
 
-class URLLauncher extends StatelessWidget {
+class URLLauncher extends StatefulWidget {
   final String title;
   final String selectedUrl;
-
-  final Completer<WebViewController> _controller =
-      Completer<WebViewController>();
 
   URLLauncher({
     @required this.title,
@@ -16,32 +13,56 @@ class URLLauncher extends StatelessWidget {
   });
 
   @override
+  _URLLauncherState createState() => _URLLauncherState();
+}
+
+class _URLLauncherState extends State<URLLauncher> {
+  bool isLoading;
+
+  final Completer<WebViewController> _controller =
+      Completer<WebViewController>();
+@override
+  void initState() {
+    super.initState();
+    isLoading = true;
+  }
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(title),
+          title: Text(widget.title),
         ),
-        body: WebView(
-          initialUrl: selectedUrl,
-          javascriptMode: JavascriptMode.unrestricted,
-          onWebViewCreated: (WebViewController webViewController) {
-            _controller.complete(webViewController);
-          },
+        body: Stack(
+                  children:<Widget>[ WebView(
+            initialUrl: widget.selectedUrl,
+            javascriptMode: JavascriptMode.unrestricted,
+            onWebViewCreated: (WebViewController webViewController) {
+              _controller.complete(webViewController);
+            },
+            onPageFinished: (_) {
+              setState(() {
+                isLoading = false;
+              });
+            },
+          ),
+          isLoading ? Center( child: CircularProgressIndicator()) : Container(),
+          ]
         ),
-        floatingActionButton: FutureBuilder<WebViewController>(
-        future: _controller.future,
-        builder: (BuildContext context, 
-          AsyncSnapshot<WebViewController> controller) {
-            if (controller.hasData) {
-              return FloatingActionButton(
-                child: Icon(Icons.arrow_back),
-                onPressed: () {
-                  controller.data.goBack();
-                });
-            }
+        // floatingActionButton: FutureBuilder<WebViewController>(
+        // future: _controller.future,
+        // builder: (BuildContext context, 
+        //   AsyncSnapshot<WebViewController> controller) {
+        //     if (controller.hasData) {
+        //       return FloatingActionButton(
+        //         child: Icon(Icons.arrow_back),
+        //         onPressed: () {
+        //           controller.data.goBack();
+        //         });
+        //     }
 
-            return Container();
-          }
-        ),);
+        //     return Container();
+        //   }
+        // ),
+      );
   }
 }

@@ -11,7 +11,7 @@ class _ChatBotState extends State<ChatBot> {
   Widget build(BuildContext context) {
     return SafeArea(
           child: WebView(
-        initialUrl: 'https://webchat.snatchbot.me/2cd686e10950d46c968744b9a93d61d6fcfdd38712cd8784a0e1b70c80b99587',
+        initialUrl: 'https://webchat.snatchbot.me/2b3dc0cfffe3813aedb96a020ff9f5787da81e37d65cc8fe803715ac62b5428b',
         javascriptMode: JavascriptMode.unrestricted,
       ),
     );

@@ -6,6 +6,7 @@ import 'package:coronaApp/pages/payment.dart';
 import 'package:flutter/material.dart';
 import 'package:ff_navigation_bar/ff_navigation_bar.dart';
 
+import 'corona_final.dart';
 import 'corona_info.dart';
 
 

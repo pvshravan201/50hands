@@ -42,10 +42,11 @@ class _MapState extends State<Map> {
     options: new MapOptions(
       center: new LatLng(clat,clong),
       zoom: 15.0,
+      maxZoom: 18,
     ),
     layers: [
       new TileLayerOptions(
-        urlTemplate: "https://api.mapbox.com/styles/v1/shravanpv201/ckbc1x5nw0mtc1ijvxvgfjfha/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic2hyYXZhbnB2MjAxIiwiYSI6ImNrYmJzczl6OTAzczQzM29kYnpuMjVmejUifQ.SMgrAdZ-9lpK5EqhtLRmXQ",
+        urlTemplate: "https://api.mapbox.com/styles/v1/shravanpv201/ckbyuchqs1wil1imnkj1e7s58/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic2hyYXZhbnB2MjAxIiwiYSI6ImNrYmM1Y2tiZjAxMzEyeG5ycTM1cDFrbXgifQ.rui0pxbaTT_gTD9_uGTHAA",
         additionalOptions: {
           'accessToken': 'pk.eyJ1Ijoic2hyYXZhbnB2MjAxIiwiYSI6ImNrYmM1Y2tiZjAxMzEyeG5ycTM1cDFrbXgifQ.rui0pxbaTT_gTD9_uGTHAA>',
           'id': 'shravanpv201.ckbbv3mfl237n22o9dlpuijsd-4aw95',
@@ -59,7 +60,7 @@ class _MapState extends State<Map> {
             point: new LatLng(clat, clong),
             builder: (ctx) =>
             new Container(
-              child: Icon(Icons.location_on)
+              child: Icon(Icons.location_on,color: Colors.blue,)
             ),
           ),
         ],
