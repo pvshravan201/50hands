@@ -20,10 +20,10 @@ class _HomeState extends State<Home> {
   int _page=2;
   
   final tabs=[
-    HomeScreen(),
+    FeatureList(),
     Payment(),
     Coronatab(),
-    MyStoryApp(),
+    HomeScreen(),
     Help(),
    ];
 
@@ -39,15 +39,16 @@ class _HomeState extends State<Home> {
       
       bottomNavigationBar:FFNavigationBar(
         theme: FFNavigationBarTheme(
-          barBackgroundColor: Colors.white,
-          selectedItemBackgroundColor: Colors.black,
+          barBackgroundColor: Color(0xFF344955),
+          selectedItemBackgroundColor: Color(0xFFF9AA33),
           selectedItemBorderColor: Colors.white,
-          unselectedItemLabelColor: Colors.black,
+          selectedItemLabelColor: Colors.blueGrey[50],
+          unselectedItemLabelColor: Colors.white,
           showSelectedItemShadow: false,
-          unselectedItemIconColor: Colors.black,
+          unselectedItemIconColor: Colors.blueGrey[50],
           unselectedItemBackgroundColor: Colors.transparent,
-          barHeight: 60,
-          itemWidth: 55,
+          barHeight: 65,
+          itemWidth: 60,
         ),
         selectedIndex: _page,
         onSelectTab: (index){
@@ -58,8 +59,8 @@ class _HomeState extends State<Home> {
 
         items: [
           FFNavigationBarItem(
-            iconData: Icons.question_answer,
-              label: "FAQ",
+            iconData: Icons.new_releases,
+              label: "Features",
 
           ),
           FFNavigationBarItem(
@@ -72,9 +73,9 @@ class _HomeState extends State<Home> {
 
           ),
           FFNavigationBarItem(
-            iconData: Icons.add_circle_outline
+            iconData: Icons.question_answer
 ,
-            label: 'Corona',
+            label: 'FAQ',
 
           ),
           FFNavigationBarItem(

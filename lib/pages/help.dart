@@ -21,6 +21,7 @@ class _HelpState extends State<Help> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+       //backgroundColor: Color(0xFF4A6572),
         body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Column(
@@ -29,7 +30,7 @@ class _HelpState extends State<Help> {
               Container(
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
-                  color: Colors.blueAccent,
+                  color: Color(0xFF344955),
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(50),
                     bottomRight: Radius.circular(50),
@@ -55,6 +56,7 @@ class _HelpState extends State<Help> {
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
+                          color: Colors.white,
                         ),
                       ),
                       SizedBox(
@@ -109,7 +111,7 @@ class _HelpState extends State<Help> {
                               width: 120,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
-                                color: Colors.black,
+                                color: Colors.white,
                               ),
                               child: Row(
                                 mainAxisAlignment:
@@ -117,12 +119,12 @@ class _HelpState extends State<Help> {
                                 children: [
                                   Icon(
                                     Icons.call,
-                                    color: Colors.white,
+                                    color: Colors.blueAccent,
                                   ),
                                   Text(
                                     "Helpline",
                                     style: TextStyle(
-                                        color: Colors.white,
+                                        color: Colors.blueAccent,
                                         fontWeight: FontWeight.bold),
                                   ),
                                 ],
@@ -141,7 +143,7 @@ class _HelpState extends State<Help> {
               Text("Testing Centers Near By",
                   style: TextStyle(
                     fontSize: 18,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w600,
                     color: Colors.black,
                   )),
               Padding(

@@ -36,10 +36,11 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.blueAccent,
+        //backgroundColor: Colors.blueAccent,
         appBar: AppBar(
           centerTitle: true,
-          backgroundColor: Colors.blueAccent,
+          //backgroundColor: Colors.blueAccent,
+          backgroundColor: Color(0xFF344955),
           title: Padding(
             padding: const EdgeInsets.only(top: 8.0),
             child: Text(
@@ -109,14 +110,14 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Padding(
                         padding: EdgeInsets.symmetric(
                           horizontal: 15.0,
-                          vertical: 12.0,
+                          vertical: 16.0,
                         ),
                         child: Text(
                           categories[index],
                           style: TextStyle(
                             color: index == selectedIndex
-                                ? Colors.white
-                                : Colors.white54,
+                                ? Color(0xFFF9AA33)
+                                : Colors.blueGrey[900],
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
                           ),
@@ -130,7 +131,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Flexible(
               child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  //color: Colors.blueGrey,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(20.0),
                     topRight: Radius.circular(20.0),

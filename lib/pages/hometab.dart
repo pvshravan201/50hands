@@ -16,11 +16,12 @@ class _HometabState extends State<Hometab> {
   Widget build(BuildContext context) {
     return SafeArea(
           child: Scaffold(
+            backgroundColor: Colors.blueGrey[700],
         body:SingleChildScrollView(
           padding: EdgeInsets.all(10),
           child: Card(
-            
-            elevation: 25,
+            color: Colors.blueGrey[700],
+            elevation: 0,
                       child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
@@ -47,10 +48,10 @@ class _HometabState extends State<Hometab> {
                             fontSize: 20,
                             fontFamily: '',
                             fontWeight: FontWeight.bold,
-                            color: Colors.black
+                            color: Color(0xFFF9AA33)
                           ),),
                         ),
-                        Divider(indent:60,endIndent: 60,color: Colors.lime,thickness: 2,),
+                        Divider(indent:60,endIndent: 60,color: Colors.white,thickness: 2,),
 
                         SizedBox(height: 10,),
 
@@ -58,7 +59,7 @@ class _HometabState extends State<Hometab> {
                           fontSize: 15,
                           fontFamily: '',
                           fontWeight: FontWeight.normal,
-                          color: Colors.black
+                          color: Colors.blueGrey[100]
                         ),),
                       ],
                     ),
@@ -104,15 +105,17 @@ class _HometabState extends State<Hometab> {
                                 fontSize: 20,
                                 fontFamily: '',
                                 fontWeight: FontWeight.bold,
+                                  color: Color(0xFFF9AA33),
                                 ),),
                               ),
-                                  Divider(indent:60,endIndent: 60,color: Colors.lime,thickness: 2,),
+                                  Divider(indent:60,endIndent: 60,color: Color(0xFFF9AA33),thickness: 2,),
 
                                 SizedBox(height: 10,),
                               Text('Using Data Driven- Models , 50-Hands intend to provide crowd sourced solutions @scale that shall make a long-lasting difference to Canadians as well as Global Citizens in need. ',style: TextStyle(
                               fontSize: 15,
                               fontFamily: '',
                                 fontWeight: FontWeight.normal,
+                                color: Colors.blueGrey[100],
                               ),),
                               ],
                                ),

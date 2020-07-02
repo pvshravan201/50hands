@@ -10,6 +10,9 @@ import 'package:coronaApp/widgets/map.dart';
 
 void main() {
   runApp(MaterialApp(
+    theme: ThemeData(
+      //accentColor: Color(0xFF4A6572),
+    ),
       initialRoute:'/home' ,
     routes: {
         // '/':(context)=>Splash(),

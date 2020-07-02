@@ -27,7 +27,7 @@ class _MyStoryAppState extends State<MyStoryApp> {
 
     return Container(
       child: Scaffold(
-        backgroundColor: Color(0xf5f5f5),
+        backgroundColor: Color(0xFFF5F5F5),
         body: SingleChildScrollView(
           child: Column(
             children: <Widget>[

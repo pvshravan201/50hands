@@ -54,22 +54,26 @@ class _CoronatabState extends State<Coronatab> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        //backgroundColor: Color(0xFFEDF0F2),
+        //backgroundColor: Colors.white,
         key: _scaffoldKey,
         appBar: AppBar(
-          elevation: 0,
+          backgroundColor: Color(0xFF344955),
           bottomOpacity: 0,
-          backgroundColor: Colors.white,
+          //elevation: 0,
           title: Text(
-            '50-Hands',
+            'Fire Ball',
             style: TextStyle(
-                fontFamily: "Pacifier", fontSize: 22, color: Colors.black),
+                //fontFamily: "R",
+              color: Colors.blueGrey[50],
+                fontSize: 22,),
           ),
-          centerTitle: true,
+          //centerTitle: true,
           leading: Builder(builder: (BuildContext context) {
             return IconButton(
               icon: Icon(
                 Icons.apps,
-                color: Colors.black,
+                color: Colors.white,
               ),
               onPressed: () {
                 Scaffold.of(context).openDrawer();
@@ -88,22 +92,21 @@ class _CoronatabState extends State<Coronatab> {
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(20),
                       bottomRight: Radius.circular(20)),
-                  color: Colors.white,
+
                 ),
                 child: Column(
                   children: [
-                    Text(
-                      "Total Corona Cases Around",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                          fontSize: 15),
-                    ),
+//                    Text(
+//                      "Total Corona Cases Around",
+//                      style: TextStyle(
+//                          fontWeight: FontWeight.bold,
+//                          fontSize: 15),
+//                    ),
                     SizedBox(
                       height: 5,
                     ),
                     Container(
-                      height: 200,
+                      height: 272,
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: <Widget>[
@@ -147,7 +150,7 @@ class _CoronatabState extends State<Coronatab> {
                   ),
                   Precautionstab(
                     address: "assets/icons/Clean_Disinfect.svg",
-                    title: "Dis-Infectants",
+                    title: "Disinfectants",
                   ),
                   Precautionstab(
                     address: "assets/icons/distance.svg",
@@ -202,9 +205,10 @@ class Worldcard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 10,
+      //color:Colors.pink[100],
+      elevation: 7,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(0),
       ),
       borderOnForeground: true,
       child: Container(
@@ -249,38 +253,26 @@ class Worldcard extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Row(
-                          children: <Widget>[
-                            InfoCard(
-                              title: 'Confirmed',
-                              iconColor: Colors.blue,
-                              effectedNum: wdata['TotalConfirmed'].toString(),
-                            ),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            InfoCard(
-                              title: 'Recovered',
-                              iconColor: Colors.green,
-                              effectedNum: wdata['TotalRecovered'].toString(),
-                            ),
-                          ],
+                        InfoCard(
+                          title: 'Confirmed',
+                          iconColor: Colors.blue,
+                          effectedNum: wdata['TotalConfirmed'].toString(),
                         ),
                         SizedBox(
                           height: 10,
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: <Widget>[
-                            SizedBox(
-                              width: 55,
-                            ),
-                            InfoCard(
-                              title: 'Deaths',
-                              iconColor: Colors.red,
-                              effectedNum: wdata['TotalDeaths'].toString(),
-                            ),
-                          ],
+                        InfoCard(
+                          title: 'Recovered',
+                          iconColor: Colors.green,
+                          effectedNum: wdata['TotalRecovered'].toString(),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        InfoCard(
+                          title: 'Deaths',
+                          iconColor: Colors.red,
+                          effectedNum: wdata['TotalDeaths'].toString(),
                         ),
                       ],
                     ),
@@ -368,11 +360,12 @@ class Countrycard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 10,
+      //color:Colors.pink[100],
+      elevation: 5,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(0),
       ),
-      borderOnForeground: true,
+      //borderOnForeground: true,
       child: Container(
         padding: EdgeInsets.only(left: 8, right: 8, top: 5, bottom: 5),
         decoration: BoxDecoration(
@@ -411,24 +404,20 @@ class Countrycard extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Row(
-                          children: <Widget>[
-                            InfoCard(
-                              title: 'Confirmed',
-                              iconColor: Colors.blue,
-                              effectedNum:
-                                  data[data.length - 1]['Confirmed'].toString(),
-                            ),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            InfoCard(
-                              title: 'Recovered',
-                              iconColor: Colors.green,
-                              effectedNum:
-                                  data[data.length - 1]['Recovered'].toString(),
-                            ),
-                          ],
+                        InfoCard(
+                          title: 'Confirmed',
+                          iconColor: Colors.blue,
+                          effectedNum:
+                              data[data.length - 1]['Confirmed'].toString(),
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        InfoCard(
+                          title: 'Recovered',
+                          iconColor: Colors.green,
+                          effectedNum:
+                              data[data.length - 1]['Recovered'].toString(),
                         ),
                         SizedBox(
                           height: 10,
@@ -444,12 +433,12 @@ class Countrycard extends StatelessWidget {
                             SizedBox(
                               width: 5,
                             ),
-                            InfoCard(
-                              title: 'New',
-                              iconColor: Colors.deepPurple,
-                              effectedNum:
-                                  data[data.length - 1]['Active'].toString(),
-                            ),
+//                            InfoCard(
+//                              title: 'New',
+//                              iconColor: Colors.deepPurple,
+//                              effectedNum:
+//                                  data[data.length - 1]['Active'].toString(),
+//                            ),
                           ],
                         ),
                       ],
